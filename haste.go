@@ -25,7 +25,7 @@ import (
 
 func haste(f *os.File) {
 	c := &http.Client{}
-	r, err := c.Post("https://hastebin.com/documents", "application/json", f)
+	r, err := c.Post("https://haste.nixc.us/documents", "application/json", f)
 	if err != nil {
 		println("Failed to send, reason: " + err.Error())
 		os.Exit(1)
@@ -49,7 +49,7 @@ func haste(f *os.File) {
 		}
 		os.Exit(1)
 	}
-	println("https://hastebin.com/" + v.Key)
+	println("https://haste.nixc.us/" + v.Key)
 }
 
 func hasteFile(fp string) {
